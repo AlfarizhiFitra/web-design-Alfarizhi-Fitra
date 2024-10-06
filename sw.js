@@ -7,6 +7,7 @@ const urlsToCache = [
     'style.css',
     'ore.jpg',
     'rumah.png',
+    'offline.html',
     'The Maker.jpeg',
     'manifest.json',
     'https://unsplash.it/400/200', // Opsional, hanya jika ingin meng-cache gambar SweetAlert
@@ -41,19 +42,26 @@ self.addEventListener('fetch', (event) => {
                 }
 
                 // Jika tidak ada dalam cache, lakukan fetch
-                return fetch(event.request).then((response) => {
-                    // Cache response untuk permintaan yang berhasil
-                    return caches.open(CACHE_NAME).then((cache) => {
-                        cache.put(event.request, response.clone());
-                        return response;
-                    });
-                }).catch((error) => {
-                    console.error('Fetching failed:', error);
-                    // Tidak ada halaman offline, cukup kembalikan response kosong atau error
+                return fetch(event.request).catch(() => {
+                    // Jika fetch gagal, tampilkan halaman offline
+                    return caches.match('offline.html');
                 });
             })
     );
 });
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+                console.error('Service Worker registration failed:', error);
+            });
+    });
+}
+
 
 // Activate event to clean up old caches
 self.addEventListener('activate', (event) => {
