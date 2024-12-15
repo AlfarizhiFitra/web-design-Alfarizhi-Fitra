@@ -1,0 +1,200 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-image: url('https://via.placeholder.com/1920x400'); /* Ganti dengan gambar nyata */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    color: #ffc107;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+
+  /* Dropdown muncul saat hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  section#profil {
+    background-color: #f8f9fa;
+  }
+
+  header .btn {
+    background-color: #ffc107;
+    color: #343a40;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  header .btn:hover {
+    background-color: #e0a800;
+    color: #fff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Gaya untuk Visi & Misi Section */
+  #visi-misi {
+    background-color: #f8f9fa;
+    padding: 50px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gaya untuk Sejarah Section */
+  #sejarah {
+    background-color: #ffffff;
+    padding: 50px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Gaya untuk Judul Section */
+  #visi-misi h2, #sejarah h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    #visi-misi, #sejarah {
+      padding: 30px 10px;
+      font-size: 1rem;
+    }
+
+    #visi-misi h2, #sejarah h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #struktur-departement img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+/* Kontak */
+.form .title h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .contact-form{
+    display: flex;
+  }
+  
+  .input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+  }
+  
+  .input-fields,
+  .msg{
+    width: 48%;
+  }
+  
+  .input-fields .input,
+  .msg textarea{
+    margin: 10px 0;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid black;
+    padding: 10px;
+    color: black;
+    width: 100%;
+  }
+  
+  .msg textarea{
+    height: 212px;
+  }
+  
+  label{
+    color: black;
+  }
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: black;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+  }
+  
+  .btn {
+      background: #007bff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px){
+    .contact-form{
+      flex-direction: column;
+    }
+    .msg textarea{
+      height: 80px;
+    }
+    .input-fields,
+    .msg{
+      width: 100%;
+    }
+  }

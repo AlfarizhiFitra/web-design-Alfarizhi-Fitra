@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak - Fakultas Teknologi Informasi</title>
+  <!-- Link ke CSS Bootstrap 5 dan FontAwesome dan SweatAlert -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Link ke Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <img src="image.png" class="rounded" alt="logo-unand" width="150px">  
+      <a class="navbar-brand" href="#">Departemen Informatika</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Beranda</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="index.html#visi-misi">Visi & Misi</a></li>
+                  <li><a class="dropdown-item" href="index.html#sejarah">Sejarah</a></li>
+                </ul>
+              </li>              
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Profil</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="profil.html#struktur-departemen">Struktur Departement</a></li>
+                    <li><a class="dropdown-item" href="profil.html#dosen">Dosen</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mata Kuliah</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Semester 1 Ganjil</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 2 Genap</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 3 Ganjil</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 4 Genap</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 5 Ganjil</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 6 Genap</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 7 Ganjil</a></li>
+                    <li><a class="dropdown-item" href="#">Semester 8 Genap</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kontak</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="kontak.html#kontak">Hubungi Kami</a></li>
+                    <li><a class="dropdown-item" href="kontak.html#lokasi">Lokasi</a></li>
+                </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Pertanyaan -->
+  <section id="kontak" class="container my-5">
+    <div class="title">
+      <h1>Contact Us Form</h1>
+    </div>
+    <form id="contact-form"></form>
+    <div class="contact-form">
+      <div class="input-fields">
+        <input type="text" class="input" placeholder="Name" required>
+        <input type="email" class="input" placeholder="Email Address" required>
+        <input type="text" class="input" placeholder="Phone" required>
+  
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+          <option value="question">Question</option>
+          <option value="suggestion">Suggestion</option>
+          <option value="issue">Issue</option>
+        </select>
+        
+        <footer class="bg-primary">
+          <label>Would you like a response?</label>
+          <input type="radio" id="response_yes" name="response" value="yes" required>
+          <label for="response_yes">Yes</label>
+          <input type="radio" id="response_no" name="response" value="no" required>
+          <label for="response_no">No</label>
+        </footer>
+      </div>
+  
+      <div class="msg">
+        <textarea placeholder="Message" required></textarea>
+        <div class="btn" id="btn">Send</div>
+      </div>
+    </div>
+    </form>
+</section>
+
+  <!-- lokasi Section -->
+  <section id="lokasi" class="container my-5">
+    <h2 class="text-center mb-4">Informasi Kami</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Alamat</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Limau Manis No. 15, Padang, Sumatera Barat</p>
+        <h4>Email</h4>
+        <p><i class="fas fa-envelope"></i> informatika@unand.ac.id</p>
+        <h4>Telepon</h4>
+        <p><i class="fas fa-phone"></i> (0751) 123456</p>
+      </div>
+    
+      <div class="col-md-6">
+        <!-- Peta Lokasi -->
+        <h4>Lokasi Kami</h4>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31675.27503336007!2d100.3790545199068!3d-0.9147432338930439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4b92e4b7038e1%3A0x8c8bc8e8c96e3ef7!2sUniversitas%20Andalas!5e0!3m2!1sid!2sid!4v1649604681927!5m2!1sid!2sid" 
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Fakultas Teknologi Informasi, Universitas Andalas</p>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
